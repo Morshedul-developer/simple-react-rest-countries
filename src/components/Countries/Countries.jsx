@@ -18,7 +18,7 @@ const Countries = ({ messageFetch }) => {
   const countries = allCountries.countries;
   return (
     <div>
-      <h1>In the countries: {countries.length}</h1>
+      <h1>In The Countries: {countries.length}</h1>
       <h2>Total visited countries: {visitedCountries.length}</h2>
       <h3>Total visited flags: {visitedFlags.length}</h3>
       <ol>
