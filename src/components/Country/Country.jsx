@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './Country.css'
-const Country = ({country}) => {
+const Country = ({country, handleVisitedCountry}) => {
     // console.log(country);
     const [visited, setVisited] = useState(false);
     const handleVisit = () => {
@@ -8,6 +8,7 @@ const Country = ({country}) => {
         // setVisited(visited ? false : true);
         // system 2
         setVisited(!visited);
+        handleVisitedCountry(country);
     }
     return (
         <div className={`border ${visited && "bg"}`}>
