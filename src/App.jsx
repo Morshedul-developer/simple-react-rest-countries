@@ -1,10 +1,16 @@
+import { Suspense } from "react";
 import "./App.css";
+import Countries from "./components/Countries/Countries";
+
+const messageFetch = fetch("https://openapi.programming-hero.com/api/all").then((res) => res.json());
 
 function App() {
   return (
     <>
       <section id="center">
-        <h1>In the countries: </h1>
+        <Suspense fallback={<h1>Loading...</h1>}>
+          <Countries messageFetch={messageFetch}></Countries>
+        </Suspense>
       </section>
     </>
   );
